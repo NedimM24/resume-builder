@@ -1,0 +1,12 @@
+:root{
+    /* Font styles*/
+    --primary-font: "Playfair Display", serif;
+    --secondary-font: "Montserrat", sans-serif;
+
+    /*Colors*/
+    --primary-color: #FFC482;
+    --secondary-color: white;
+    --accent-color: #2B3A67;
+    --accent-color2: #496A81;
+}
+
