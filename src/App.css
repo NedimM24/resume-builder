@@ -1,0 +1,31 @@
+body{
+    margin: 0;
+}
+
+:root{
+    /* Font styles*/
+    --primary-font: "Playfair Display", serif;
+    --secondary-font: "Montserrat", sans-serif;
+
+    /*Colors*/
+    --primary-color: #FFC482;
+    --secondary-color: white;
+    --accent-color: #2B3A67;
+    --accent-color2: #496A81;
+}
+
+.app-container {
+  display: flex;
+  height: 100vh;
+}
+
+.left-panel {
+  flex: 1;
+  background-color: var(--primary-color);
+
+}
+
+.right-panel {
+  flex: 1;
+  box-shadow: -5px 0 5px -2px #888;
+}
