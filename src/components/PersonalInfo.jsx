@@ -8,13 +8,13 @@ function PersonalInfo({personalInfo, setPersonalInfo, handleSubmit}){
             [name]: value
         })
     }
-    
-
     return(
         <>
             <form onSubmit={handleSubmit} action="">
                 <label>Name</label>
-                <input type="text" 
+                <input 
+                type="text" 
+                name="name"
                 required
                 value={personalInfo.name}
                 onChange={handleChange}

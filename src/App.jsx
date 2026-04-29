@@ -14,8 +14,10 @@ function App() {
 
   return (
     <>
+   
       <div className="app-container">
         <div className="left-panel">
+          <h1>Resume Builder ⚙️</h1>
           <ResumeBuilder setResume={setResume} />
         </div>
 

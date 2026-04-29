@@ -4,12 +4,12 @@ function ResumeBuilder({setResume}){
 
   const [personalInfo, setPersonalInfo] = useState(
     {
+      id: crypto.randomUUID(),
       name:"",
       email: "",
       address: "",
     }
   )
-
   const handleSubmit = (e) => {
     e.preventDefault();
     setResume(personalInfo)
@@ -21,11 +21,10 @@ function ResumeBuilder({setResume}){
     }
     )
   }
-  
     return (
     <>
       <div className='resume-container'>
-            <PersonalInfo personalInfo={personalInfo} setPersonalInfo={setPersonalInfo} handleSubmit={handleSubmit} /> 
+        <PersonalInfo personalInfo={personalInfo} setPersonalInfo={setPersonalInfo} handleSubmit={handleSubmit} /> 
         {/* <Education /> */}
         {/* <Experience /> */}
       </div>
