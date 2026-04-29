@@ -22,7 +22,7 @@ body{
 .left-panel {
   flex: 1;
   background-color: var(--primary-color);
-
+  
 }
 
 .right-panel {
