@@ -8,11 +8,16 @@ function ResumeBuilder({setResume}){
       name:"",
       email: "",
       address: "",
+      phone: "",
+      title: "",
+
     }
   )
   const handleSubmit = (e) => {
     e.preventDefault();
-    setResume(personalInfo)
+    setResume(personalInfo);
+    //setResume(Educataion)
+    //setResume(Experience)
     setPersonalInfo(
       {
       name:"",

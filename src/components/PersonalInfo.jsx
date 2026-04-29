@@ -10,7 +10,8 @@ function PersonalInfo({personalInfo, setPersonalInfo, handleSubmit}){
     }
     return(
         <>
-            <form onSubmit={handleSubmit} action="">
+            <form className="personal-form" onSubmit={handleSubmit} action="">
+                <h2>Personal Information</h2>
                 <label>Name</label>
                 <input 
                 type="text" 
@@ -20,7 +21,16 @@ function PersonalInfo({personalInfo, setPersonalInfo, handleSubmit}){
                 onChange={handleChange}
                 />
 
-                <button type="submit">Submit</button>
+                <label>Email</label>
+                <input 
+                type="email" 
+                name="email"
+                required
+                value={personalInfo.email}
+                onChange={handleChange}
+                />
+
+                <button className="form-btn" type="submit">Submit</button>
             </form>
         </>
     )
