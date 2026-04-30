@@ -68,6 +68,30 @@ h2{
     transform: scale(1.07);
 }
 
+/*Display and forms*/
+.personal-info-header{
+    line-height: .1;
+    justify-self: center;
+}
+
+h5{
+    justify-self: center;
+}
+
+.contact-address{
+    display: flex;
+    justify-content: space-between;
+    gap: 1rem;
+    padding-left: 1rem;
+    padding-right: 1rem;
+}
+
+.section-break{
+    width: 90%;
+    border: .2px solid rgb(150, 137, 137);
+    justify-self: center;
+}
+
 
 
 

@@ -47,8 +47,13 @@ function ResumeBuilder({setResume}){
   */
   const handleSubmit = (e) => {
     e.preventDefault();
-    setResume({personalInfo, education, experience});
-    //setResume(Experience)
+    setResume((prev) => ({
+      personalInfo:[...prev.personalInfo, personalInfo],
+      education:[...prev.education, education],
+      experience:[...prev.experience, experience],
+
+    }));
+  
     setPersonalInfo(
       {
       id: crypto.randomUUID(),
