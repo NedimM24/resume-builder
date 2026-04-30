@@ -1,5 +1,6 @@
 import { useState } from "react"
-import PersonalInfo from "./PersonalInfo"
+import PersonalInfo from "./resumebuilder-children/PersonalInfo"
+import Education from "./resumebuilder-children/Education"
 function ResumeBuilder({setResume}){
 
   const [personalInfo, setPersonalInfo] = useState(
@@ -13,6 +14,16 @@ function ResumeBuilder({setResume}){
 
     }
   )
+
+  const [education, setEducation] = useState(
+    {
+      id: crypto.randomUUID(),
+      schoolName:"",
+      degreeField: "",
+      graduationDate: "",
+    }
+  )
+
   const handleSubmit = (e) => {
     e.preventDefault();
     setResume(personalInfo);
@@ -30,7 +41,7 @@ function ResumeBuilder({setResume}){
     <>
       <div className='resume-container'>
         <PersonalInfo personalInfo={personalInfo} setPersonalInfo={setPersonalInfo} handleSubmit={handleSubmit} /> 
-        {/* <Education /> */}
+        <Education education={education} setEducation={setEducation} handleSubmit={handleSubmit} /> 
         {/* <Experience /> */}
       </div>
     </>
