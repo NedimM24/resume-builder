@@ -22,7 +22,7 @@ function Educataion(education, setEducation, handleSubmit){
                 onChange={handleChange}
                 />
 
-                <label>Field Of Study </label>
+                <label> Field of Degree </label>
                 <input 
                 type="text" 
                 name="degreeField"
