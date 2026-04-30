@@ -45,50 +45,55 @@ function ResumeBuilder({setResume}){
   and passes it to setResume to update the parent state.
   After submission, it resets both form inputs.
   */
-  const handleSubmit = (e) => {
+    const handlePersonalSubmit = (e) => {
     e.preventDefault();
     setResume((prev) => ({
-      personalInfo:[...prev.personalInfo, personalInfo],
-      education:[...prev.education, education],
-      experience:[...prev.experience, experience],
-
+      ...prev,
+      personalInfo
     }));
-  
-    setPersonalInfo(
-      {
+  }
+
+  // EDUCATION
+  const handleEducationSubmit = (e) => {
+    e.preventDefault();
+
+    setResume((prev) => ({
+      ...prev,
+      education: [...prev.education, education]
+    }));
+
+    setEducation({
       id: crypto.randomUUID(),
-      name:"",
-      email: "",
-      address: "",
-      phone: "",
-      title: "",
-    })
+      schoolName: "",
+      degreeField: "",
+      graduationDate: "",
+    });
+  }
 
-     setEducation(
-      {
-        id: crypto.randomUUID(),
-        schoolName:"",
-        degreeField: "",
-        graduationDate: "",
-    })
+  // EXPERIENCE
+  const handleExperienceSubmit = (e) => {
+    e.preventDefault();
 
-    setExperience(
-      {
-        id: crypto.randomUUID(),
-        companyName: "",
-        position: "",
-        positionDescription: "",
-        startDate: "",
-        endDate: "",
-      }
-    )
+    setResume((prev) => ({
+      ...prev,
+      experience: [...prev.experience, experience]
+    }));
+
+    setExperience({
+      id: crypto.randomUUID(),
+      companyName: "",
+      position: "",
+      positionDescription: "",
+      startDate: "",
+      endDate: "",
+    });
   }
     return (
     <>
       <div className='resume-container'>
-        <PersonalInfo personalInfo={personalInfo} setPersonalInfo={setPersonalInfo} handleSubmit={handleSubmit} /> 
-        <Education education={education} setEducation={setEducation} handleSubmit={handleSubmit} /> 
-        <Experience experience={experience} setExperience={setExperience} handleSubmit={handleSubmit} />
+        <PersonalInfo personalInfo={personalInfo} setPersonalInfo={setPersonalInfo} handlePersonalSubmit={handlePersonalSubmit} /> 
+        <Education education={education} setEducation={setEducation} handleEducationSubmit={handleEducationSubmit} /> 
+        <Experience experience={experience} setExperience={setExperience} handleExperienceSubmit={handleExperienceSubmit} />
       </div>
     </>
   )

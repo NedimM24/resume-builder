@@ -6,7 +6,7 @@ import ResumeBuilder from './components/ResumeBuilder'
 function App() {
   //
   const [resume, setResume] = useState({
-    personalInfo: [],
+    personalInfo: null,
     education: [],
     experience: []
   });

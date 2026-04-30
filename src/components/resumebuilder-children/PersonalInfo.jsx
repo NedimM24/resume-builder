@@ -1,4 +1,4 @@
-function PersonalInfo({personalInfo, setPersonalInfo, handleSubmit}){
+function PersonalInfo({personalInfo, setPersonalInfo, handlePersonalSubmit}){
 
     const handleChange = (e) => {
         const {name, value} = e.target
@@ -10,7 +10,7 @@ function PersonalInfo({personalInfo, setPersonalInfo, handleSubmit}){
     }
     return(
         <>
-            <form className="form personal-form" onSubmit={handleSubmit} action="">
+            <form className="form personal-form" onSubmit={handlePersonalSubmit} action="">
                 <h2>Personal Info</h2>
                 <label>Name</label>
                 <input 

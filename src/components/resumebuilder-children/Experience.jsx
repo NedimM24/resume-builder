@@ -1,4 +1,4 @@
-function Experience(experience, setExperience, handleSubmit){
+function Experience({experience, setExperience, handleExperienceSubmit}){
 
     const handleChange = (e) => {
         const {name, value} = e.target
@@ -11,7 +11,7 @@ function Experience(experience, setExperience, handleSubmit){
 
     return(
         <>
-            <form className="form experience-form" onSubmit={handleSubmit} action="">
+            <form className="form experience-form" onSubmit={handleExperienceSubmit} action="">
                 <h2>Experience</h2>
                 <label>Company Name</label>
                 <input 

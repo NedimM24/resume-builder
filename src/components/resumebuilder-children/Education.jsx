@@ -1,4 +1,4 @@
-function Educataion(education, setEducation, handleSubmit){
+function Education({education, setEducation, handleEducationSubmit}){
 
      const handleChange = (e) => {
         const {name, value} = e.target
@@ -11,7 +11,7 @@ function Educataion(education, setEducation, handleSubmit){
 
     return(
         <>
-            <form className="form personal-form" onSubmit={handleSubmit} action="">
+            <form className="form personal-form" onSubmit={handleEducationSubmit} action="">
                 <h2>Education</h2>
                 <label>School Name</label>
                 <input 
@@ -46,4 +46,4 @@ function Educataion(education, setEducation, handleSubmit){
 
 }
 
-export default Educataion
+export default Education

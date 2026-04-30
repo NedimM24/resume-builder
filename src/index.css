@@ -16,7 +16,7 @@
    
     margin-top: 1rem;
     border: 1px solid black;
-    width: 90%;
+    min-width: 525px;
     height: 90%;
 }
 
@@ -87,7 +87,7 @@ h5{
 }
 
 .section-break{
-    width: 90%;
+    width: 93%;
     border: .2px solid rgb(150, 137, 137);
     justify-self: center;
 }
