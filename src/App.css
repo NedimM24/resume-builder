@@ -33,6 +33,7 @@ body{
 
 .right-panel {
   display: flex;
+  padding: .5rem;
   flex-direction: column;
   flex: 1.7;
   box-shadow: -5px 0 5px -2px #888;

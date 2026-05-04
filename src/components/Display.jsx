@@ -22,18 +22,38 @@ function Display({resume}){
                 </div>
             )}
             
-
              {/* EDUCATION */}
             <div className="education-display">
                 {resume.education.map((item => (
                     <div key={item.id}>
-                        <h6>{item.schoolName}</h6>
-                        <p>{item.degreeField}</p>
-                        <p>{item.graduationDate}</p>
+                        <div>
+                            <h4>Education</h4>
+                        </div>
+                        <p>University - {item.schoolName}</p>
+                        <p>Field of Study - {item.degreeField}</p>
+                        <p>Graduated - {item.graduationDate}</p>
                     </div>
                 )))}
             </div>
-            
+            <p className="section-break"></p>
+
+            {/* EXPERIENCE */}
+            <div className="experience-display">
+                {resume.experience.map((item => (
+                    <div key={item.id}>
+                        <div>
+                            <h4>Experience</h4>
+                        </div>
+                        <p>Company Name - {item.companyName}</p>
+                        <p>Position - {item.position}</p>
+                        <p>Decription of work - {item.positionDescription}</p>
+                        <p>Start Date - {item.startDate}</p>
+                        <p>End Date - {item.endDate}</p>
+                    </div>
+                )))}
+            </div>
+            <p className="section-break"></p>
+        
          </div>
          <button className="print-btn">Print Resume</button>
         </>
