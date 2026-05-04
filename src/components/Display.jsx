@@ -44,11 +44,11 @@ function Display({resume}){
                         <div>
                             <h4>Experience</h4>
                         </div>
-                        <p>Company Name - {item.companyName}</p>
-                        <p>Position - {item.position}</p>
-                        <p>Decription of work - {item.positionDescription}</p>
-                        <p>Start Date - {item.startDate}</p>
-                        <p>End Date - {item.endDate}</p>
+                        <p><b>Company Name</b> - {item.companyName}</p>
+                        <p><b>Position</b> - {item.position}</p>
+                        <p><b>Decription of work</b> - {item.positionDescription}</p>
+                        <p><b>Start Date</b> - {item.startDate}</p>
+                        <p><b>End Date</b> - {item.endDate}</p>
                     </div>
                 )))}
             </div>
