@@ -32,7 +32,7 @@ This project was built as part of a React learning exercise to practice componen
 
 ## Project Structure
 
-```text
+
 src/
 │
 ├── components/
