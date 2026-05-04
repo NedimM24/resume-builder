@@ -1,5 +1,10 @@
 function Display({resume}){
     const info = resume.personalInfo;
+
+    const handlePrint = () => {
+        window.print();
+    }
+    
     return(
         <>
          <div className="display-container">
@@ -7,7 +12,7 @@ function Display({resume}){
         
             {/* PERSONAL INFO */}
             {info && (
-                <div className="personl-info-display">
+                <div className="personal-info-display">
                 <div className="personal-info-header">
                     <h1>{info.name}</h1>
                     <h5>{info.title}</h5>
@@ -55,7 +60,7 @@ function Display({resume}){
             <p className="section-break"></p>
         
          </div>
-         <button className="print-btn">Print Resume</button>
+         <button onClick={handlePrint} className="print-btn">Print Resume</button>
         </>
     )
 }

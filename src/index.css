@@ -46,6 +46,8 @@ h1{
     color: black;
 }
 
+
+
 h2{
     color: black;
 }
@@ -123,7 +125,28 @@ h5{
     transform: scale(1.05);
 }
 
+@media print{
+    body * {
+        visibility: hidden;
+    }
 
+    .display-container,
+    .display-container * {
+        visibility: visible;
+    }
 
+    .display-container{
+    
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+        border: none;
+    }
 
+    .print-btn{
+        display: none !important;
+    }
+
+}
 
