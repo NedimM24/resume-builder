@@ -1,6 +1,7 @@
 # 📄 React Resume Builder
 
-https://resume-builder-jade-mu-83.vercel.app/
+<img width="2540" height="1165" alt="image" src="https://github.com/user-attachments/assets/8d9fac11-96b1-42f3-9f84-b7c4769e6723" />
+
 
 A simple React application that allows users to input their personal, educational, and professional experience to generate a formatted résumé.
 
