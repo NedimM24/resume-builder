@@ -32,20 +32,23 @@ This project was built as part of a React learning exercise to practice componen
 
 ## Project Structure
 
+## Project Structure
 
+```text
 src/
 │
 ├── components/
 │   ├── ResumeBuilder.jsx
 │   ├── Display.jsx
-│   ├── Resumebuilder-children/
-│   │   ├── PersonalInfo.jsx
-│   │   ├── Education.jsx
-│   │   └── Experience.jsx
+│   └── resumebuilder-children/
+│       ├── PersonalInfo.jsx
+│       ├── Education.jsx
+│       └── Experience.jsx
 │
 ├── App.jsx
 ├── App.css
 └── index.css
+```
 
 ## How It Works
 
