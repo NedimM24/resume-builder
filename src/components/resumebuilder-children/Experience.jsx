@@ -1,4 +1,4 @@
-function Experience({experience, setExperience, handleExperienceSubmit}){
+function Experience({experience, setExperience, handleExperienceSubmit, isActive, onShow}){
 
     const handleChange = (e) => {
         const {name, value} = e.target
@@ -11,7 +11,8 @@ function Experience({experience, setExperience, handleExperienceSubmit}){
 
     return(
         <>
-            <form className="form experience-form" onSubmit={handleExperienceSubmit} action="">
+            {isActive ? (
+                <form className="form experience-form" onSubmit={handleExperienceSubmit} action="">
                 <h2>Experience</h2>
                 <label>Company Name</label>
                 <input 
@@ -60,6 +61,12 @@ function Experience({experience, setExperience, handleExperienceSubmit}){
 
                 <button className="form-btn" type="submit">Submit</button>
             </form>
+            ) : (
+                <button className="accordion" onClick={onShow}>
+                    <h2>Experience</h2>
+                </button>
+            )}
+            
         </>
     )
 

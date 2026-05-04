@@ -101,19 +101,26 @@ function ResumeBuilder({setResume}){
         <PersonalInfo 
           personalInfo={personalInfo} 
           setPersonalInfo={setPersonalInfo} 
-          handlePersonalSubmit={handlePersonalSubmit} /> 
+          handlePersonalSubmit={handlePersonalSubmit}
+          isActive={activeIndex === 0}
+          onShow={() => setActiveIndex(0)} 
+          />
+          
         
         <Education 
           education={education} setEducation={setEducation} 
           handleEducationSubmit={handleEducationSubmit} 
-          isActive={activeIndex === 0}
-          onShow={() => setActiveIndex(0)}
+          isActive={activeIndex === 1}
+          onShow={() => setActiveIndex(1)}
           /> 
 
         <Experience 
           experience={experience} 
           setExperience={setExperience} 
-          handleExperienceSubmit={handleExperienceSubmit} />
+          handleExperienceSubmit={handleExperienceSubmit}
+          isActive={activeIndex === 2}
+          onShow={() => setActiveIndex(2)} 
+          />
       </div>
     </>
   )

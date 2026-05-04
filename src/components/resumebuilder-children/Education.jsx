@@ -43,8 +43,8 @@ function Education({education, setEducation, handleEducationSubmit, isActive, on
                 <button className="form-btn" type="submit">Submit</button>
             </form>
             ) : (
-                <button onClick={onShow}>
-                    Expand
+                <button className="accordion" onClick={onShow}>
+                    <h2>Education</h2>
                 </button>
             )}
             

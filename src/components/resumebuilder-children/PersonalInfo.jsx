@@ -1,4 +1,4 @@
-function PersonalInfo({personalInfo, setPersonalInfo, handlePersonalSubmit}){
+function PersonalInfo({personalInfo, setPersonalInfo, handlePersonalSubmit, isActive, onShow}){
 
     const handleChange = (e) => {
         const {name, value} = e.target
@@ -10,7 +10,8 @@ function PersonalInfo({personalInfo, setPersonalInfo, handlePersonalSubmit}){
     }
     return(
         <>
-            <form className="form personal-form" onSubmit={handlePersonalSubmit} action="">
+            {isActive ? (
+                <form className="form personal-form" onSubmit={handlePersonalSubmit} action="">
                 <h2>Personal Info</h2>
                 <label>Name</label>
                 <input 
@@ -59,6 +60,12 @@ function PersonalInfo({personalInfo, setPersonalInfo, handlePersonalSubmit}){
 
                 <button className="form-btn" type="submit">Submit</button>
             </form>
+            ) : (
+                <button className="accordion" onClick={onShow}>
+                    <h2>Personal Info</h2>
+                </button>
+            )}
+            
         </>
     )
 }
