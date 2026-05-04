@@ -4,6 +4,9 @@ import Education from "./resumebuilder-children/Education"
 import Experience from "./resumebuilder-children/Experience"
 function ResumeBuilder({setResume}){
 
+  //Creating an active index
+  const [activeIndex, setActiveIndex] = useState(0);
+
   //Personal info object
   const [personalInfo, setPersonalInfo] = useState(
     {
@@ -95,9 +98,22 @@ function ResumeBuilder({setResume}){
     return (
     <>
       <div className='resume-container'>
-        <PersonalInfo personalInfo={personalInfo} setPersonalInfo={setPersonalInfo} handlePersonalSubmit={handlePersonalSubmit} /> 
-        <Education education={education} setEducation={setEducation} handleEducationSubmit={handleEducationSubmit} /> 
-        <Experience experience={experience} setExperience={setExperience} handleExperienceSubmit={handleExperienceSubmit} />
+        <PersonalInfo 
+          personalInfo={personalInfo} 
+          setPersonalInfo={setPersonalInfo} 
+          handlePersonalSubmit={handlePersonalSubmit} /> 
+        
+        <Education 
+          education={education} setEducation={setEducation} 
+          handleEducationSubmit={handleEducationSubmit} 
+          isActive={activeIndex === 0}
+          onShow={() => setActiveIndex(0)}
+          /> 
+
+        <Experience 
+          experience={experience} 
+          setExperience={setExperience} 
+          handleExperienceSubmit={handleExperienceSubmit} />
       </div>
     </>
   )

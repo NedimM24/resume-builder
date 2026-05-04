@@ -1,4 +1,4 @@
-function Education({education, setEducation, handleEducationSubmit}){
+function Education({education, setEducation, handleEducationSubmit, isActive, onShow}){
 
      const handleChange = (e) => {
         const {name, value} = e.target
@@ -11,7 +11,8 @@ function Education({education, setEducation, handleEducationSubmit}){
 
     return(
         <>
-            <form className="form personal-form" onSubmit={handleEducationSubmit} action="">
+            {isActive ? (
+                <form className="form personal-form" onSubmit={handleEducationSubmit} action="">
                 <h2>Education</h2>
                 <label>School Name</label>
                 <input 
@@ -41,6 +42,12 @@ function Education({education, setEducation, handleEducationSubmit}){
                 />
                 <button className="form-btn" type="submit">Submit</button>
             </form>
+            ) : (
+                <button onClick={onShow}>
+                    Expand
+                </button>
+            )}
+            
         </>
     )
 
