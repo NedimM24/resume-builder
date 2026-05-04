@@ -1,4 +1,113 @@
-# React + Vite
+# 📄 React Resume Builder
+
+A simple React application that allows users to input their personal, educational, and professional experience to generate a formatted résumé.
+
+This project was built as part of a React learning exercise to practice component structure, state management, and props.
+
+---
+
+## Features
+
+- Add personal information (name, email, phone, address, title)
+- Add education history
+- Add work experience
+- Dynamic résumé preview updates in real time
+- Accordion-style UI (only one section open at a time)
+- Multiple education and experience entries supported
+
+---
+
+## Concepts Practiced
+
+- React functional components
+- `useState` hook
+- Controlled components (form inputs)
+- Lifting state up
+- Passing data via props
+- Conditional rendering
+- Handling form submissions
+- Dynamic list rendering with `.map()`
+
+---
+
+## Project Structure
+
+```text
+src/
+│
+├── components/
+│   ├── ResumeBuilder.jsx
+│   ├── Display.jsx
+│   ├── Resumebuilder-children/
+│   │   ├── PersonalInfo.jsx
+│   │   ├── Education.jsx
+│   │   └── Experience.jsx
+│
+├── App.jsx
+├── App.css
+└── index.css
+
+## How It Works
+
+### User Input
+
+Users enter information into form sections:
+
+- Personal Info  
+- Education  
+- Experience  
+
+---
+
+### State Management
+
+Each section manages its own local state and passes data up to the parent component (`App.jsx`).
+
+---
+
+### Submit Flow
+
+On submit:
+
+- Data is sent to the parent component  
+- Stored in a centralized `resume` state object  
+
+---
+
+### Display
+
+The `Display` component renders the résumé dynamically based on the current state.
+
+---
+
+## Notes
+
+- This project uses React Strict Mode, which may cause some functions to run twice during development. This is expected behavior.  
+- Styling is kept simple as the focus is on React fundamentals.  
+- Responsive design (media queries) is not included.  
+
+---
+
+## Future Improvements
+
+- Add edit functionality for submitted sections  
+- Add delete buttons for education and experience entries  
+- Save data using localStorage  
+- Improve styling and layout  
+- Add print-friendly formatting  
+- Add animations for accordion transitions  
+
+---
+
+## Getting Started
+
+### Clone the repository
+
+```bash
+git clone https://github.com/your-username/react-resume-builder.git
+
+
+ React + Vite
 
 This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
 

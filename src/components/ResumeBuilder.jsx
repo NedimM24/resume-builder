@@ -33,7 +33,12 @@ function ResumeBuilder({setResume}){
   //Experience object
   const [experience, setExperience] = useState(
     {
-      
+     id: crypto.randomUUID(), 
+     companyName: "",
+     position: "",
+     positionDescription: "",
+     startDate: "",
+     endDate: "",
     }
   )
 
